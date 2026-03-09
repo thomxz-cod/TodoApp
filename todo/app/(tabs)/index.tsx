@@ -1,15 +1,19 @@
+import { createHomeStyles } from "@/assets/styles/home.styles";
 import useTheme from "@/hooks/useTheme";
-import { Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
-  const { toggleDarkMode } = useTheme();
+  const { toggleDarkMode, colors } = useTheme();
+  const homeStyles = createHomeStyles(colors)
 
   return (
-    <View >
-      <View >
+      <SafeAreaView style={homeStyles.safeArea}>
         <Text >HOME</Text>
         <TouchableOpacity onPress={toggleDarkMode}>MUDA TEMA</TouchableOpacity>
-      </View>
-    </View>
+      </SafeAreaView>
+      
   )
+
+  
 }

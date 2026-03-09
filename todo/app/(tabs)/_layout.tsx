@@ -1,5 +1,6 @@
 import useTheme from "@/hooks/useTheme";
 import { Ionicons } from "@expo/vector-icons";
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import { Tabs } from 'expo-router';
 
 const TabsLayout = () => {
@@ -27,6 +28,12 @@ const TabsLayout = () => {
                     <Ionicons name='settings' color={color} size={size}/>
                   ) 
             }} />
+            <Tabs.Screen name='user' options={
+                { title: "User",
+                  tabBarIcon : ({color, size}) => (
+                    <FontAwesome6 name="user-pen" color={color} size={size}/>
+                  ) 
+            }} />   
         </Tabs>
     )
 }
