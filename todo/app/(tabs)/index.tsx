@@ -1,4 +1,5 @@
 import { createHomeStyles } from "@/assets/styles/home.styles";
+import Header from "@/components/Header";
 import useTheme from "@/hooks/useTheme";
 import { Text, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -9,11 +10,10 @@ export default function Index() {
 
   return (
       <SafeAreaView style={homeStyles.safeArea}>
+        <Header />
         <Text >HOME</Text>
         <TouchableOpacity onPress={toggleDarkMode}>MUDA TEMA</TouchableOpacity>
       </SafeAreaView>
-      
-  )
 
-  
+  )
 }
