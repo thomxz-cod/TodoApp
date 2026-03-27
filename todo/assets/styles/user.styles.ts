@@ -9,9 +9,11 @@ export const createUserStyles = (colors: ColorScheme) => {
       height: "100%",
       justifyContent: "center",
       alignItems: "center"
-    }, title: {
+    },
+    title: {
       fontSize: 32,
       fontWeight: "700",
+      fontFamily: "android",
       letterSpacing: -1,
       color: colors.text,
       textAlign: "center"
@@ -45,9 +47,10 @@ export const createUserStyles = (colors: ColorScheme) => {
       elevation: 8, // elevation is used to create a shadow on the section, in android
     },
     userIcon: {
-      color: "white" ,
+      color: colors.text,
       textAlign: "center",
-      fontSize: 80
+      fontSize: 80,
+      marginBottom: 15
     },
   });
 

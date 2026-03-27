@@ -48,3 +48,26 @@ export const toggleTodo = mutation({
     });
   },
 });
+
+// atualizar o texto do todo
+export const updateTodo = mutation({
+    args : { 
+        id: v.id("todos"),
+        text : v.string() 
+    },
+    handler: async (ctx , args) => {
+        await ctx.db.patch(args.id , {
+            text: args.text,
+        })
+    }
+})
+
+// deletar 1 todo
+export const deleteTodo = mutation({
+    args : { 
+        id: v.id("todos")
+    },
+    handler: async (ctx , args) => {
+        await ctx.db.delete(args.id)
+    }
+})

@@ -5,6 +5,10 @@ export const createSettingsStyles = (colors: ColorScheme) => {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
+      backgroundColor: colors.bg,
+      height: "100%",
+      justifyContent: "center",
+      alignItems: "center"
     },
     safeArea: {
       flex: 1,
@@ -29,8 +33,10 @@ export const createSettingsStyles = (colors: ColorScheme) => {
     title: {
       fontSize: 32,
       fontWeight: "700",
+      fontFamily: "android",
       letterSpacing: -1,
       color: colors.text,
+      textAlign: "center"
     },
     scrollView: {
       flex: 1,
